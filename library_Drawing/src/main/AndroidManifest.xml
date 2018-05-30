@@ -1,6 +1,2 @@
-<manifest
-    package="com.sir.app"
-    >
+<manifest package="com.sir.library.drawing"/>
 
-  <application/>
-</manifest>
