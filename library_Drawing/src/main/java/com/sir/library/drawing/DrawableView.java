@@ -93,7 +93,8 @@ public class DrawableView extends View implements View.OnTouchListener, Scroller
     @Override
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         super.onSizeChanged(w, h, oldw, oldh);
-        gestureScroller.setViewBounds(w, h);
+        //gestureScroller.setViewBounds(w, h);
+        gestureScroller.setCanvasBounds(w, h);
     }
 
     @Override
@@ -144,6 +145,11 @@ public class DrawableView extends View implements View.OnTouchListener, Scroller
             invalidate();
         }
     }
+
+    public boolean existValidDrawing() {
+        return paths.size() > 0;
+    }
+
 
     public void clear() {
         paths.clear();
